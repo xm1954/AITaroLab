@@ -1,0 +1,144 @@
+/* 전체 컨테이너 */
+.login-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+
+/* 로그인 폼 */
+.login-form {
+    background-color: #ffffff;
+    padding: 20px; /* 내부 패딩 축소 */
+    border-radius: 8px; /* 모서리 곡률 축소 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 그림자 간소화 */
+    width: 100%;
+    max-width: 300px; /* 최대 너비 축소 */
+}
+
+/* 제목 */
+.login-title {
+    font-size: 20px; /* 제목 크기 축소 */
+    font-weight: bold;
+    margin-bottom: 20px; /* 간격 축소 */
+    text-align: center;
+    color: #333;
+}
+
+/* 폼 그룹 */
+.form-group {
+    margin-bottom: 12px; /* 간격 축소 */
+}
+
+label {
+    display: block;
+    font-size: 12px; /* 라벨 크기 축소 */
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+/* 입력 필드 컨테이너 */
+.input-container {
+    position: relative;
+}
+
+/* 입력 필드 */
+.form-input {
+    width: 100%; /* 모든 입력 필드 동일 너비 */
+    height: 36px; /* 고정 높이 축소 */
+    padding: 0 32px 0 10px; /* 좌우 여백 축소 */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* 모서리 곡률 축소 */
+    font-size: 12px; /* 폰트 크기 축소 */
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box; /* 패딩과 너비를 함께 계산 */
+}
+
+.form-input:focus {
+    border-color: #6a1b9a;
+}
+
+/* 비밀번호 아이콘 */
+.password-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* 여백 축소 */
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    font-size: 12px; /* 아이콘 크기 축소 */
+}
+
+/* 체크박스 그룹 */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* 간격 축소 */
+    font-size: 12px; /* 텍스트 크기 축소 */
+    color: #555;
+}
+
+/* 로그인 버튼 */
+.login-button {
+    width: 100%; /* 입력 필드와 동일 너비 */
+    height: 36px; /* 버튼 높이 축소 */
+    padding: 0; /* 내부 여백 제거 */
+    background-color: #26000a;
+    color: #ffffff;
+    font-size: 13px; /* 버튼 텍스트 크기 축소 */
+    font-weight: bold;
+    border: none;
+    border-radius: 6px; /* 모서리 곡률 축소 */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 3px;
+}
+
+.login-button:hover {
+    background-color: #637b57;
+}
+/* SNS 로그인 섹션 */
+.sns-login {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sns-login p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* SNS 아이콘 */
+.sns-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* 아이콘 간격 */
+}
+
+.sns-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.sns-icon:hover {
+    transform: scale(1.1); /* 호버 시 확대 */
+}
+
+.kakao{
+    display: flex; /* 플렉스 컨테이너 설정 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    width: 50px;
+    height: 40px;
+    text-align: center;
+
+}

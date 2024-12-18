@@ -1,0 +1,136 @@
+.result-container {
+    margin: 7% auto;
+    padding: 20px;
+    max-width: 700px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: scale(0.7); /* 전체 요소를 70% 크기로 축소 */
+    transform-origin: top; /* 축소 기준점을 상단으로 설정 */
+}
+
+.result-title {
+    font-size: 2rem; /* 기존 2.5rem -> 30% 축소 */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.result-subtitle {
+    font-size: 1rem; /* 기존 1.1rem -> 줄임 */
+    margin-bottom: 20px;
+}
+
+.card-results {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; /* 간격도 약간 줄임 */
+}
+
+.result-card {
+    width: 90px; /* 기존 120px -> 30% 줄임 */
+    text-align: center;
+}
+
+.result-card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.result-card-name {
+    font-size: 0.8rem; /* 텍스트 크기 조정 */
+    margin-top: 6px;
+}
+
+.result-card-meaning {
+    font-size: 0.8rem; /* 의미 텍스트 크기 조정 */
+    color: #555;
+}
+
+.avatar-image {
+    width: 35px; /* 기존 50px -> 30% 줄임 */
+    height: 35px;
+    margin-right: 10px;
+}
+
+.dialog-content {
+    padding: 10px; /* 패딩 축소 */
+    font-size: 0.9rem; /* 텍스트 크기 축소 */
+    line-height: 1.4;
+}
+
+.user-dialog {
+    background: #e3f2fd;
+    color: #333;
+}
+
+.gyreong-dialog {
+    background: #fff8e1;
+    color: #444;
+}
+
+.gpt-result {
+    margin-top: 30px; /* 위쪽 마진 축소 */
+    padding: 15px; /* 패딩 축소 */
+    max-width: 90%; /* 전체 크기 조정 */
+}
+
+.gpt-title {
+    font-size: 1.3rem; /* 기존 1.5rem -> 줄임 */
+    margin-bottom: 10px;
+}
+
+.gpt-block {
+    font-size: 0.9rem; /* 텍스트 크기 축소 */
+    padding: 10px; /* 패딩 축소 */
+    margin-bottom: 10px;
+}
+
+.dialog-box {
+    display: flex; /* 이미지와 대화 상자를 나란히 정렬 */
+    align-items: flex-start; /* 상단 정렬 */
+    margin: 15px 0; /* 상하 여백 설정 */
+    width: 100%; /* 전체 너비를 차지하도록 설정 */
+}
+
+.dialog-content {
+    background: #f1f1f1; /* 대화상자 배경색 */
+    padding: 10px; /* 내부 여백 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    font-size: 0.9rem; /* 텍스트 크기 */
+    line-height: 1.4; /* 줄 간격 */
+    flex-grow: 1; /* 남은 공간을 차지하도록 설정 */
+}
+
+.user-dialog {
+    background-color: #e3f2fd; /* 사용자 대화 상자 색상 */
+    color: #333;
+}
+
+.gyreong-dialog {
+    background-color: #fff8e1; /* 기령님 대화 상자 색상 */
+    color: #444;
+}
+
+.avatar-image {
+    width: 35px; /* 이미지 크기 */
+    height: 35px;
+    margin-right: 10px; /* 이미지와 텍스트 사이 간격 */
+    border-radius: 50%;
+}
+.loading-overlay {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.loading-overlay.hidden {
+    opacity: 0;
+    pointer-events: none; /* 상호작용 방지 */
+}
+
+.retry-button{
+    margin: auto;
+    font-size: 0.6rem;
+}

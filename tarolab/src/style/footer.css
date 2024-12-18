@@ -1,0 +1,68 @@
+/* Footer 전체 컨테이너 */
+
+.footer-con {
+    position: relative; /* 부모의 영향을 받지 않도록 독립적 위치 */
+    left: 0;
+    width: 100vw; /* 뷰포트 전체 너비를 사용 */
+    max-width: 100vw; /* 뷰포트 제한 */
+    margin: 0;
+    padding: 1rem 0;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+
+/* Footer 내용 정렬 */
+.footer-content2 {
+    display: flex; /* 플렉스박스 사용 */
+    justify-content: space-around; /* 요소들을 좌우로 배치 */
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+    flex-wrap: wrap; /* 화면이 작아지면 줄바꿈 */
+}
+
+/* Footer 섹션 */
+.footer-section {
+    flex: 1;
+    margin: 0 1rem; /* 좌우 여백 */
+    min-width: 200px; /* 최소 너비 */
+}
+
+/* Footer 제목 스타일 */
+.footer-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Footer 설명 */
+.footer-description {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Footer 링크 스타일 */
+.footer-links {
+    list-style: none; /* 리스트 마커 제거 */
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-links li:hover {
+    color: #7e57c2; /* 호버 시 보라색 */
+}
+
+/* Footer 연락처 스타일 */
+.footer-contact {
+    font-size: 0.8rem;
+    color: #555;
+}

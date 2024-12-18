@@ -1,0 +1,138 @@
+.mypage-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    transform: scale(0.6); /* 축소 비율 */
+    transform-origin: top center; /* 기준점을 중앙 위로 설정 */
+    margin-top: 80px; /* 여백 조정 (음수 값 사용) */
+
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.profile-image img {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 40%;
+}
+
+.profile-info {
+    display: inline-block; /* 기본적으로 한 줄로 나열 */
+}
+
+.profile-info span {
+    font-weight: bold;
+}
+
+
+.profile-info p {
+    font-size: 0.9rem;
+    color: gray;
+    margin-top: 2%;
+
+}
+
+.edit-button {
+    background-color: #7b68ee;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 35%;
+    top: 10px; /* 상단 여백 */
+    right: 10px; /* 우측 여백 */
+    z-index: 10; /* 버튼이 다른 요소 위에 올라오도록 설정 */
+}
+
+.records-section {
+    position: relative;
+    margin-top: 20px;
+}
+
+.record-item {
+    display: flex; /* 가로 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: space-between; /* 양쪽 끝 정렬 */
+    background: whitesmoke;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    position: relative; /* 부모 요소로 설정 */
+}
+
+.record-item p {
+    flex: 1; /* 질문 부분이 최대한 영역을 차지 */
+    text-align: left; /* 왼쪽 정렬 */
+    margin: 0;
+    font-size: 1rem;
+}
+
+.record-item span {
+    margin-right: 50px; /* 삭제 버튼과 겹치지 않도록 여백 */
+    font-size: 0.9rem;
+    color: gray;
+    white-space: nowrap; /* 줄바꿈 방지 */
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.sort-button {
+    position: absolute; /* 절대 위치 설정 */
+    top: 10px; /* 상단 여백 */
+    right: 10px; /* 우측 여백 */
+    margin: 0; /* 여백 제거 */
+    z-index: 10; /* 버튼이 다른 요소 위에 올라오도록 설정 */
+}
+
+.sort-button button {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sort-button button:hover {
+    background-color: #0056b3;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}

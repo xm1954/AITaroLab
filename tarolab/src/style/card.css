@@ -1,0 +1,258 @@
+.body{
+    margin-top: 5%;
+
+}
+/* 전체 컨테이너 */
+.card-container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px; /* 패딩 줄이기 */
+    position: relative;
+    width: 36%; /* 80% -> 30% 감소 적용 */
+    max-width: 840px; /* 1200px -> 30% 감소 */
+    overflow: hidden;
+}
+
+/* 제목 스타일 */
+.card-title {
+    font-size: 1.75rem; /* 2.5rem -> 30% 감소 */
+    font-weight: bold;
+    margin-bottom: 7px; /* 여백 줄이기 */
+    color: #333;
+}
+
+.card-title .highlight {
+    color: #e74c3c;
+}
+
+/* 설명 텍스트 */
+.card-description {
+    font-size: 0.7rem; /* 1.2rem -> 30% 감소 */
+    color: #666;
+    margin-bottom: 30px; /* 여백 줄이기 */
+}
+
+/* 카드 스택 영역 */
+.card-stack-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 105px; /* 150px -> 30% 감소 */
+    background-color: #fff; /* 컨테이너 배경색 */
+    margin-top: 10%;
+    border-radius: 10px;
+    margin-bottom: 10%;
+}
+
+/* 카드 스택 */
+.card-stack {
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding: 0; /* 여백 제거 */
+}
+
+/* 스크롤바 스타일 */
+.card-stack::-webkit-scrollbar {
+    height: 10px; /* 15px -> 30% 감소 */
+}
+
+.card-stack::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.card-stack::-webkit-scrollbar-thumb {
+    background: #aaa; /* 스크롤바 색상 */
+    border-radius: 10px;
+}
+
+.card-stack::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* 카드 이미지 */
+.Drawcard {
+    width: 70px; /* 100px -> 30% 감소 */
+    height: 87px; /* 150px -> 30% 감소 */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 6px; /* 8px -> 30% 감소 */
+    object-fit: cover; /* 이미지가 카드 영역에 꽉 차도록 */
+    display: block; /* 인라인 여백 제거 */
+    padding: 0; /* 내부 여백 제거 */
+    background-color: transparent; /* 카드 배경 투명화 */
+    border-radius: 20px;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5); /* 그림자 크기 조정 */
+
+}
+
+/* 카드에 마우스를 올리면 효과 */
+.Drawcard:hover {
+    transform: translateY(-7px); /* 10px -> 30% 감소 */
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3); /* 그림자 크기 조정 */
+}
+
+/* 버튼 스타일 */
+.button-container {
+    margin-top: 14px; /* 20px -> 30% 감소 */
+}
+
+.card-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 3.5px; /* 5px -> 30% 감소 */
+    padding: 7px 14px; /* 10px 20px -> 30% 감소 */
+    font-size: 0.7rem; /* 1rem -> 30% 감소 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #c0392b;
+}
+/* 선택된 카드 이미지 컨테이너 */
+.selected-cards {
+    display: flex; /* 가로로 나열 */
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center;
+    gap: 10px; /* 카드 간격 */
+    margin-top: 20px; /* 위 여백 */
+}
+
+/* 각 카드 이미지 스타일 */
+.selected-card img {
+    width: 60px; /* 카드 이미지 너비 */
+    height: auto; /* 높이 비율 유지 */
+    border-radius: 10px; /* 둥근 테두리 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+/* 남은 카드 수 문구 */
+.remaining-cards {
+    text-align: center; /* 가운데 정렬 */
+    margin-top: 10px;
+}
+
+.remaining-text {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 2px solid #26000a; /* 보라색 테두리 */
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 12px;
+    background-color: #dbf8ff; /* 배경색 */
+}
+.Drawcard.reversed {
+    transform: rotate(180deg); /* 역방향 카드 회전 */
+    transition: transform 0.3s ease; /* 부드러운 회전 효과 */
+}
+
+.retry-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -30%;
+    padding: 15px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+}
+
+.retry-button {
+    background-color: #7e57c2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.6rem;
+    transition: background-color 0.3s ease;
+}
+
+.retry-button:hover {
+    background-color: #5e35b1;
+}
+/* 로딩 오버레이 전체 */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* 로딩 컨테이너 */
+.loading-container {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out; /* 부드러운 등장 애니메이션 */
+}
+
+/* 원형 프로그레스 바 */
+.loading-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s ease-in-out; /* 부드러운 게이지 애니메이션 */
+}
+
+/* 나머지 CSS는 동일 */
+
+
+/* 중앙 퍼센트 값 */
+.loading-text {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    position: absolute;
+}
+
+/* 버튼 스타일 */
+.loading-button {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.loading-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* 부드러운 등장 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
