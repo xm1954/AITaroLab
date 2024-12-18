@@ -1,25 +1,78 @@
-.user-card {
+/* 전체 컨테이너 */
+.admin-container {
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.header-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    border: none;
-    background-color: #007bff;
+.profile-button {
+    background-color: #8b5cf6;
     color: #fff;
+    border: none;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-nickname {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user-date {
+    font-size: 14px;
+    color: #777;
+}
+
+.user-actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ban-button {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+.user-actions button:hover {
     background-color: #0056b3;
+    color: #fff;
 }
 
 .pagination {
@@ -31,10 +84,30 @@ button:hover {
 
 .pagination li {
     margin: 0 5px;
-    cursor: pointer;
 }
 
-.pagination .active {
-    font-weight: bold;
-    text-decoration: underline;
+.pagination a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.pagination .active a {
+    background-color: #007bff;
+    color: #fff;
+}
+.unban-button {
+    background-color: #4caf50; /* 초록색 */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.unban-button:hover {
+    background-color: #45a049;
 }

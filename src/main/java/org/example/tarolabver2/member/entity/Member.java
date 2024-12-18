@@ -5,6 +5,8 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import org.example.tarolabver2.member.ROLE;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 @Getter
@@ -40,5 +42,29 @@ public class Member {
     @Enumerated(EnumType.STRING)
     private ROLE role;
 
+    // 정지 종료 날짜
+    @Column(name = "ban_end_date")
+    private LocalDate banEndDate;
+
+    // 정지 사유
+    @Column(name = "ban_reason", length = 200)
+    private String banReason;
+
+    @Column(updatable = false)
+    private LocalDateTime createdAt;
+
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = LocalDateTime.now(); // 생성 시 자동 설정
+    }
+
+    public void unban() {
+        this.banEndDate = null; // 정지 종료 날짜 초기화
+        this.banReason = null;  // 정지 사유 초기화
+    }
+
+    public boolean isBanned() {
+        return this.banEndDate != null && this.banEndDate.isAfter(LocalDate.now());
+    }
 
 }

@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faUserCircle, faBell } from '@fortawesome/free-solid-svg-icons';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faUserCircle, faBell } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
     const [memberMenu, setMemberMenu] = useState(false);
     const [menu, setMenu] = useState(false);
     const [notificationMenu, setNotificationMenu] = useState(false);
-    const [nickname, setNickname] = useState(""); // 닉네임 상태
-    const [role, setRole] = useState(""); // 역할 상태
+    const [nickname, setNickname] = useState("익명 사용자"); // 닉네임 상태
+    const [role, setRole] = useState("(Guest)"); // 역할 상태
     const [isAuthenticated, setIsAuthenticated] = useState(false); // 인증 상태
     const navigate = useNavigate();
 
@@ -18,11 +18,11 @@ const Header = () => {
 
     const handleLogout = () => {
         localStorage.removeItem("authToken");
-        setNickname("");
-        setRole("");
+        setNickname("익명 사용자");
+        setRole("(Guest)");
         setIsAuthenticated(false);
         alert("로그아웃 되었습니다.");
-        navigate('/Login');
+        navigate("/Login");
     };
 
     const toggleMenu = () => {
@@ -89,8 +89,8 @@ const Header = () => {
                 </div>
 
                 <span className="logo" onClick={() => handleNavigation("/")}>
-                    TaroLab
-                </span>
+          TaroLab
+        </span>
 
                 <div className="menu-right">
                     <div className="menu-item" onClick={toggleDropDown}>
@@ -123,6 +123,11 @@ const Header = () => {
                                 <div className="dropdown-item" onClick={() => handleNavigation("/MyPage")}>
                                     마이페이지
                                 </div>
+                                {role === "ADMIN" && (
+                                    <div className="dropdown-item" onClick={() => handleNavigation("/admin")}>
+                                        사용자 관리
+                                    </div>
+                                )}
                             </>
                         ) : (
                             <>

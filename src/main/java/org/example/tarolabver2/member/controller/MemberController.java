@@ -13,14 +13,18 @@ import org.example.tarolabver2.member.repository.MemberRepository;
 import org.example.tarolabver2.member.service.MemberService;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 @Slf4j
@@ -122,18 +126,91 @@ public class MemberController {
                     "token", token,
                     "nickname", nickname
             ));
-        } catch (AuthenticationException e) {
-            log.error("Authentication failed: {}", e.getMessage());
+        }catch (InternalAuthenticationServiceException e) { // 정지된 계정 처리
+            log.error("정지된 계정: {}", e.getMessage());
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(Map.of(
+                    "message", e.getMessage()
+            ));
+        } catch (UsernameNotFoundException | BadCredentialsException e) { // 이메일/비밀번호 오류 처리
+            log.error("로그인 실패: {}", e.getMessage());
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of(
                     "message", "이메일 또는 비밀번호가 잘못되었습니다."
             ));
-        } catch (Exception e) {
-            log.error("Unexpected error during login: {}", e.getMessage(), e);
+        } catch (Exception e) { // 기타 예외 처리
+            log.error("로그인 처리 중 알 수 없는 오류: {}", e.getMessage(), e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of(
                     "message", "서버 오류가 발생했습니다."
             ));
         }
+
     }
 
+    // 회원 정지 처리
+    @PostMapping("/{id}/ban")
+    public ResponseEntity<?> banMember(@PathVariable Long id, @RequestBody Map<String, Object> request) {
+        try {
+            // 요청에서 정지 기간과 사유 추출
+            int days = (int) request.get("days");
+            String reason = (String) request.get("reason");
+
+            // 정지 처리
+            memberService.banMember(id, days, reason);
+
+            if(days >= 1) {
+
+                return ResponseEntity.ok(Map.of(
+                        "message", "회원 정지가 성공적으로 처리되었습니다.",
+                        "banEndDate", memberService.getBanEndDate(id),
+                        "reason", reason
+                ));
+            }else{
+                return ResponseEntity.status(HttpStatus.FORBIDDEN).body(Map.of("meesage", "정지 기간은 하루 이상이어야 합니다."));
+            }
+        } catch (Exception e) {
+            log.error("Error during ban operation: {}", e.getMessage(), e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of(
+                    "message", "회원 정지 중 오류가 발생했습니다."
+            ));
+        }
+    }
+
+    // 닉네임 변경 처리
+    @PatchMapping("/{id}/nickname")
+    public ResponseEntity<?> updateNickname(@PathVariable Long id, @RequestBody Map<String, String> request) {
+        try {
+            // 요청에서 새로운 닉네임 추출
+            String newNickname = request.get("nickname");
+
+            // 닉네임 변경 처리
+            memberService.updateNickname(id, newNickname);
+
+            return ResponseEntity.ok(Map.of(
+                    "message", "닉네임이 성공적으로 변경되었습니다.",
+                    "nickname", newNickname
+            ));
+        } catch (Exception e) {
+            log.error("Error during nickname update: {}", e.getMessage(), e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of(
+                    "message", "닉네임 변경 중 오류가 발생했습니다."
+            ));
+        }
+    }
+
+    @PatchMapping("/{id}/unban")
+    public ResponseEntity<?> unbanMember(@PathVariable Long id) {
+        try {
+            memberService.unbanMember(id);
+            return ResponseEntity.ok(Map.of("message", "정지가 해제되었습니다."));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of("message", e.getMessage()));
+        }
+    }
+
+
+    @GetMapping("/members")
+    public ResponseEntity<List<MemberDto>> getAllMembers() {
+        List<MemberDto> members = memberService.getAllMembers();
+        return ResponseEntity.ok(members);
+    }
 
 }

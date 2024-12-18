@@ -11,7 +11,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class MemberService {
@@ -46,8 +48,14 @@ public class MemberService {
         Member member = memberRepository.findByEmail(loginDto.getEmail())
                 .orElseThrow(() -> new IllegalArgumentException("이메일 또는 비밀번호가 잘못되었습니다."));
 
+        // 정지된 계정인지 확인
+        if (member.getBanEndDate() != null && member.getBanEndDate().isAfter(LocalDate.now())) {
+            throw new IllegalStateException("정지된 계정입니다. 정지 해제 날짜: " + member.getBanEndDate());
+        }
+
+        // 비밀번호 확인
         if (!passwordEncoder.matches(loginDto.getPassword(), member.getPassword())) {
-            throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
+            throw new IllegalArgumentException("비밀번호가 잘못되었습니다.");
         }
 
         return jwtTokenUtil.generateToken(
@@ -68,5 +76,53 @@ public class MemberService {
                 List.of(new SimpleGrantedAuthority(member.getRole().name()))
         );
     }
+
+    // 닉네임 변경
+    public void updateNickname(Long id, String newNickname) {
+        Member member = memberRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("회원이 존재하지 않습니다."));
+        member.setNickname(newNickname);
+        memberRepository.save(member);
+    }
+
+    // 회원 정지
+    public void banMember(Long id, int days, String reason) {
+        Member member = memberRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("회원이 존재하지 않습니다."));
+        member.setBanEndDate(LocalDate.now().plusDays(days));
+        member.setBanReason(reason);
+        memberRepository.save(member);
+    }
+
+    // 정지 종료 날짜 조회
+    public LocalDate getBanEndDate(Long id) {
+        Member member = memberRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("회원이 존재하지 않습니다."));
+        return member.getBanEndDate();
+    }
+
+    public List<MemberDto> getAllMembers() {
+
+        return memberRepository.findAll().stream()
+                .map(member -> new MemberDto(
+                        member.getId(), // id 추가
+                        member.getName(),
+                        member.getNickname(),
+                        member.getEmail(),
+                        member.getRole(),
+                        member.getBanEndDate(),
+                        member.getBanReason(),
+                        member.getCreatedAt() // createdAt 추가
+                ))
+                .collect(Collectors.toList());
+    }
+
+    public void unbanMember(Long id) {
+        Member member = memberRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 사용자입니다."));
+        member.unban(); // 정지 해제
+        memberRepository.save(member); // 변경된 정보 저장
+    }
+
 
 }
