@@ -16,7 +16,7 @@ spring:
 
 gpt:
   api:
-    key: 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
+    key:
 
 
   jpa:
