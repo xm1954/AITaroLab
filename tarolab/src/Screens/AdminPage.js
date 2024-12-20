@@ -2,11 +2,17 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
 import "../style/UserList.css";
+import {useNavigate} from "react-router-dom";
 
 const AdminPage = () => {
   const [users, setUsers] = useState([]);
   const [pageNumber, setPageNumber] = useState(0);
   const usersPerPage = 10;
+  const Navigate = useNavigate();
+
+  const handleMove = () =>{
+    Navigate('/feedbacklist');
+  }
 
   const token = localStorage.getItem("authToken");
 
@@ -135,6 +141,9 @@ const AdminPage = () => {
                 activeClassName={"active"}
             />
         )}
+        <div>
+          <button onClick={handleMove}>피드백 확인하기</button>
+        </div>
       </div>
   );
 };

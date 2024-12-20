@@ -1,4 +1,4 @@
-package org.example.tarolabver2.member.entity;
+package org.example.tarolabver2.member.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;

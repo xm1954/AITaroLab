@@ -60,6 +60,12 @@ const Card = () => {
                 body: JSON.stringify({ cardId }),
             });
 
+            if (response.status === 401) {
+                alert("로그인 후 이용 가능합니다.");
+                navigate("/Login"); // 로그인 페이지로 이동
+                return;
+            }
+
             if (!response.ok) throw new Error("카드 정보를 가져올 수 없습니다.");
 
             const card = await response.json();
@@ -100,6 +106,12 @@ const Card = () => {
                 },
                 body: JSON.stringify(payload),
             });
+
+            if (response.status === 401) {
+                alert("로그인 후 이용 가능합니다.");
+                navigate("/Login"); // 로그인 페이지로 이동
+                return;
+            }
 
             if (!response.ok) {
                 const errorMessage = await response.text();

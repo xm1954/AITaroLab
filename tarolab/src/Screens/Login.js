@@ -11,7 +11,11 @@ const Login = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
-    const nevigate = useNavigate();
+    const navigate = useNavigate();
+
+    const handleReginsterMove = () => {
+        navigate("/Signup");
+    }
 
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
@@ -35,7 +39,7 @@ const Login = () => {
             console.log("Stored Token in localStorage:", localStorage.getItem('authToken')); // 저장된 값 확인
 
             alert(`${nickname}님 환영합니다. 👏`);
-            nevigate('/')
+            navigate('/')
 
         }catch(error){
 
@@ -90,42 +94,21 @@ const Login = () => {
                             </div>
                         </div>
 
-                        {/* 로그인 정보 저장 */}
-                        <div className="form-group checkbox-group">
-                            <input type="checkbox" id="remember" />
-                            <label htmlFor="remember">로그인 정보 저장</label>
-                        </div>
-
                         {/* 로그인 버튼 */}
                         <button type="submit" className="login-button">로그인</button>
-                        <button type="submit" className="login-button">회원가입</button>
+                        <button
+                            type="button" // 수정: submit 대신 button으로 변경
+                            className="login-button"
+                            onClick={(e) => {
+
+                                e.preventDefault(); // 필요하면 기본 동작 방지
+                                handleReginsterMove();}}>
+                            회원가입
+                        </button>
                     </form>
 
                     {/* SNS 로그인 섹션 */}
-                    <div className="sns-login">
-                        <p>SNS 계정으로 로그인</p>
-                        <div className="sns-icons">
-                            <img
-                                src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
-                                alt="Google"
-                                className="sns-icon"
-                            />
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                                alt="Instagram"
-                                className="sns-icon"
-                            />
-                            <img className="kakao"
-                                 src="/images/kakao_login_medium.png"
-                                 alt="Kakao Login"
-                            />
-                            <img
-                                src="https://abs.twimg.com/icons/apple-touch-icon-192x192.png"
-                                alt="Twitter"
-                                className="sns-icon"
-                            />
-                        </div>
-                    </div>
+                  
                 </div>
             </div>
             <Footer/>

@@ -1,14 +1,13 @@
 package org.example.tarolabver2.member.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import jakarta.validation.Valid;
 import org.example.tarolabver2.common.jwt.JwtTokenUtil;
 import org.example.tarolabver2.member.dto.MemberDto;
+import org.example.tarolabver2.member.dto.MemberUpdateDto;
 import org.example.tarolabver2.member.entity.Member;
-import org.example.tarolabver2.member.entity.MemberLoginDto;
+import org.example.tarolabver2.member.dto.MemberLoginDto;
 import org.example.tarolabver2.member.repository.MemberRepository;
 import org.example.tarolabver2.member.service.MemberService;
 import org.springframework.http.HttpStatus;
@@ -16,7 +15,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -126,7 +124,7 @@ public class MemberController {
                     "token", token,
                     "nickname", nickname
             ));
-        }catch (InternalAuthenticationServiceException e) { // 정지된 계정 처리
+        } catch (InternalAuthenticationServiceException e) { // 정지된 계정 처리
             log.error("정지된 계정: {}", e.getMessage());
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body(Map.of(
                     "message", e.getMessage()
@@ -156,14 +154,14 @@ public class MemberController {
             // 정지 처리
             memberService.banMember(id, days, reason);
 
-            if(days >= 1) {
+            if (days >= 1) {
 
                 return ResponseEntity.ok(Map.of(
                         "message", "회원 정지가 성공적으로 처리되었습니다.",
                         "banEndDate", memberService.getBanEndDate(id),
                         "reason", reason
                 ));
-            }else{
+            } else {
                 return ResponseEntity.status(HttpStatus.FORBIDDEN).body(Map.of("meesage", "정지 기간은 하루 이상이어야 합니다."));
             }
         } catch (Exception e) {
@@ -197,7 +195,7 @@ public class MemberController {
     }
 
     @PatchMapping("/{id}/unban")
-    public ResponseEntity<?> unbanMember(@PathVariable Long id) {
+    public ResponseEntity<?> unbanMember(@PathVariable Long id) { // pathvariable은 URL 경로에 특정값을 전달할 때 사용.
         try {
             memberService.unbanMember(id);
             return ResponseEntity.ok(Map.of("message", "정지가 해제되었습니다."));
@@ -213,4 +211,20 @@ public class MemberController {
         return ResponseEntity.ok(members);
     }
 
+    @PostMapping("/update/password")
+    public ResponseEntity<Map<String, String>> update(@RequestBody MemberUpdateDto request) {
+        try {
+            // 비밀번호 변경 처리
+            memberService.update(request.getId(), request.getPassword());
+
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "비밀번호가 성공적으로 변경되었습니다.");
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            Map<String, String> errorResponse = new HashMap<>();
+            errorResponse.put("message", e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
+        }
+    }
 }
+

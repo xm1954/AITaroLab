@@ -4,9 +4,12 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import org.example.tarolabver2.member.ROLE;
+import org.example.tarolabver2.question.entity.Question;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Getter
@@ -66,5 +69,6 @@ public class Member {
     public boolean isBanned() {
         return this.banEndDate != null && this.banEndDate.isAfter(LocalDate.now());
     }
+
 
 }

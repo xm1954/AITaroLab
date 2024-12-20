@@ -39,10 +39,8 @@ public class SecurityConfig {
 
 
                 .authorizeHttpRequests(authorize
-                        -> authorize
-                        .anyRequest().permitAll())
-//                        .requestMatchers("/api/members/login", "/api/members/register", "/api/members/role").permitAll()
-//                        .anyRequest().authenticated()) // 로그인, 회원가입 허용
+                        -> authorize.requestMatchers("/api/members/login", "/api/members/register", "/api/members/role").permitAll()
+                         .anyRequest().authenticated()) // 로그인, 회원가입 허용
 
 
 

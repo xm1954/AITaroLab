@@ -19,11 +19,7 @@ const Footer = () => {
                     <ul className="footer-links">
                         <li>홈</li>
                         <li>타로 리딩</li>
-                        <li>타로 일일운세</li>
-                        <li>예/아니오 타로</li>
-                        <li>카드 의미</li>
                         <li>카드 스프레드</li>
-                        <li>블로그</li>
                         <li>전문 타로 카드 리더</li>
                         <li>문제 피드백</li>
                     </ul>

@@ -4,7 +4,7 @@ import org.example.tarolabver2.common.jwt.JwtTokenUtil;
 import org.example.tarolabver2.member.ROLE;
 import org.example.tarolabver2.member.dto.MemberDto;
 import org.example.tarolabver2.member.entity.Member;
-import org.example.tarolabver2.member.entity.MemberLoginDto;
+import org.example.tarolabver2.member.dto.MemberLoginDto;
 import org.example.tarolabver2.member.repository.MemberRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -124,5 +124,12 @@ public class MemberService {
         memberRepository.save(member); // 변경된 정보 저장
     }
 
+
+    public MemberLoginDto update(Long id, String password) {
+        Member member = memberRepository.findById(id).orElseThrow(()-> new IllegalArgumentException("회원을 찾을 수 없습니다"));
+        member.setPassword(passwordEncoder.encode(password));
+        memberRepository.save(member);
+        return new MemberLoginDto();
+    }
 
 }
