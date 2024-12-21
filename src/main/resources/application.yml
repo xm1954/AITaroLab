@@ -8,29 +8,22 @@ server:
 
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/tarolab
+    driver-class-name: org.mariadb.jdbc.Driver   # MariaDB 드라이버로 변경
+    url: jdbc:mariadb://localhost:3306/tarolab  # MariaDB URL 형식으로 변경
     username: root
     password: 1234
 
-
-gpt:
-  api:
-    key:
-
-
   jpa:
     hibernate:
-      ddl-auto: update   # update
+      ddl-auto: update   # update 유지
       naming:
         physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
     show-sql: true
     properties:
       hibernate:
         format_sql: true
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MariaDBDialect  # Hibernate Dialect 변경
 
-  #default 1MB
   servlet:
     multipart:
       max-file-size: 10MB

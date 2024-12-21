@@ -1,0 +1,782 @@
+[
+    {
+        "id": 1,
+        "name": "The Fool",
+        "type": "Major",
+        "suit": null,
+        "number": 0,
+        "meaning_upright": "새로운 시작, 순수함",
+        "meaning_reverse": "무모함, 부주의",
+        "image_url": "/images/cards/m00.jpg"
+    },
+    {
+        "id": 2,
+        "name": "The Magician",
+        "type": "Major",
+        "suit": null,
+        "number": 1,
+        "meaning_upright": "의지, 창의성",
+        "meaning_reverse": "기만, 속임수",
+        "image_url": "/images/cards/m01.jpg"
+    },
+    {
+        "id": 3,
+        "name": "The High Priestess",
+        "type": "Major",
+        "suit": null,
+        "number": 2,
+        "meaning_upright": "직관, 잠재력",
+        "meaning_reverse": "비밀, 혼란",
+        "image_url": "/images/cards/m02.jpg"
+    },
+    {
+        "id": 4,
+        "name": "The Empress",
+        "type": "Major",
+        "suit": null,
+        "number": 3,
+        "meaning_upright": "풍요, 창조",
+        "meaning_reverse": "과잉, 정체",
+        "image_url": "/images/cards/m03.jpg"
+    },
+    {
+        "id": 5,
+        "name": "The Emperor",
+        "type": "Major",
+        "suit": null,
+        "number": 4,
+        "meaning_upright": "권위, 안정",
+        "meaning_reverse": "독재, 경직성",
+        "image_url": "/images/cards/m04.jpg"
+    },
+    {
+        "id": 6,
+        "name": "The Hierophant",
+        "type": "Major",
+        "suit": null,
+        "number": 5,
+        "meaning_upright": "전통, 지혜",
+        "meaning_reverse": "독단적, 편협함",
+        "image_url": "/images/cards/m05.jpg"
+    },
+    {
+        "id": 7,
+        "name": "The Lovers",
+        "type": "Major",
+        "suit": null,
+        "number": 6,
+        "meaning_upright": "사랑, 선택",
+        "meaning_reverse": "갈등, 부조화",
+        "image_url": "/images/cards/m06.jpg"
+    },
+    {
+        "id": 8,
+        "name": "The Chariot",
+        "type": "Major",
+        "suit": null,
+        "number": 7,
+        "meaning_upright": "의지, 승리",
+        "meaning_reverse": "의욕 상실, 실패",
+        "image_url": "/images/cards/m07.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Strength",
+        "type": "Major",
+        "suit": null,
+        "number": 8,
+        "meaning_upright": "용기, 인내",
+        "meaning_reverse": "불안, 두려움",
+        "image_url": "/images/cards/m08.jpg"
+    },
+    {
+        "id": 10,
+        "name": "The Hermit",
+        "type": "Major",
+        "suit": null,
+        "number": 9,
+        "meaning_upright": "내성, 고독",
+        "meaning_reverse": "고립, 외로움",
+        "image_url": "/images/cards/m09.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Wheel of Fortune",
+        "type": "Major",
+        "suit": null,
+        "number": 10,
+        "meaning_upright": "운명, 변화",
+        "meaning_reverse": "불운, 저항",
+        "image_url": "/images/cards/m10.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Justice",
+        "type": "Major",
+        "suit": null,
+        "number": 11,
+        "meaning_upright": "정의, 균형",
+        "meaning_reverse": "불공정, 왜곡",
+        "image_url": "/images/cards/m11.jpg"
+    },
+    {
+        "id": 13,
+        "name": "The Hanged Man",
+        "type": "Major",
+        "suit": null,
+        "number": 12,
+        "meaning_upright": "희생, 새로운 관점",
+        "meaning_reverse": "정체, 두려움",
+        "image_url": "/images/cards/m12.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Death",
+        "type": "Major",
+        "suit": null,
+        "number": 13,
+        "meaning_upright": "변화, 재탄생",
+        "meaning_reverse": "저항, 끝맺음",
+        "image_url": "/images/cards/m13.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Temperance",
+        "type": "Major",
+        "suit": null,
+        "number": 14,
+        "meaning_upright": "조화, 절제",
+        "meaning_reverse": "불균형, 극단",
+        "image_url": "/images/cards/m14.jpg"
+    },
+    {
+        "id": 16,
+        "name": "The Devil",
+        "type": "Major",
+        "suit": null,
+        "number": 15,
+        "meaning_upright": "유혹, 속박",
+        "meaning_reverse": "해방, 극복",
+        "image_url": "/images/cards/m15.jpg"
+    },
+    {
+        "id": 17,
+        "name": "The Tower",
+        "type": "Major",
+        "suit": null,
+        "number": 16,
+        "meaning_upright": "붕괴, 갑작스러운 변화",
+        "meaning_reverse": "저항, 회복",
+        "image_url": "/images/cards/m16.jpg"
+    },
+    {
+        "id": 18,
+        "name": "The Star",
+        "type": "Major",
+        "suit": null,
+        "number": 17,
+        "meaning_upright": "희망, 영감",
+        "meaning_reverse": "실망, 무기력",
+        "image_url": "/images/cards/m17.jpg"
+    },
+    {
+        "id": 19,
+        "name": "The Moon",
+        "type": "Major",
+        "suit": null,
+        "number": 18,
+        "meaning_upright": "직관, 꿈",
+        "meaning_reverse": "혼란, 두려움",
+        "image_url": "/images/cards/m18.jpg"
+    },
+    {
+        "id": 20,
+        "name": "The Sun",
+        "type": "Major",
+        "suit": null,
+        "number": 19,
+        "meaning_upright": "성공, 기쁨",
+        "meaning_reverse": "과잉 자신감, 낙담",
+        "image_url": "/images/cards/m19.jpg"
+    },
+    {
+        "id": 21,
+        "name": "Judgement",
+        "type": "Major",
+        "suit": null,
+        "number": 20,
+        "meaning_upright": "재평가, 각성",
+        "meaning_reverse": "두려움, 자책",
+        "image_url": "/images/cards/m20.jpg"
+    },
+    {
+        "id": 22,
+        "name": "The World",
+        "type": "Major",
+        "suit": null,
+        "number": 21,
+        "meaning_upright": "완성, 통합",
+        "meaning_reverse": "미완성, 지연",
+        "image_url": "/images/cards/m21.jpg"
+    },
+    {
+        "id": 23,
+        "name": "Ace of Cups",
+        "type": "Minor",
+        "suit": "Cups",
+        "number": 1,
+        "meaning_upright": "새로운 사랑, 감정의 시작",
+        "meaning_reverse": "감정적 막힘, 불안정",
+        "image_url": "/images/cards/c01.jpg"
+    },
+    {
+        "id": 24,
+        "name": "Two of Cups",
+        "type": "Minor",
+        "suit": "Cups",
+        "number": 2,
+        "meaning_upright": "파트너십, 조화",
+        "meaning_reverse": "불화, 오해",
+        "image_url": "/images/cards/c02.jpg"
+    },
+    {
+        "id": 25,
+        "name": "Three of Cups",
+        "type": "Minor",
+        "suit": "Cups",
+        "number": 3,
+        "meaning_upright": "축하, 우정",
+        "meaning_reverse": "혼란, 파티 후유증",
+        "image_url": "/images/cards/c03.jpg"
+    },
+    {
+        "id": 26,
+        "name": "Four of Cups",
+        "type": "Minor",
+        "suit": "Cups",
+        "number": 4,
+        "meaning_upright": "명상, 성찰",
+        "meaning_reverse": "권태, 기회 상실",
+        "image_url": "/images/cards/c04.jpg"
+    },
+    {
+        "id": 27,
+        "name": "Five of Cups",
+        "type": "Minor",
+        "suit": "Cups",
+        "number": 5,
+        "meaning_upright": "상실, 슬픔",
+        "meaning_reverse": "희망, 회복",
+        "image_url": "/images/cards/c05.jpg"
+    },
+    {
+        "id": 28,
+        "name": "Six of Cups",
+        "type": "Minor",
+        "suit": "Cups",
+        "number": 6,
+        "meaning_upright": "향수, 기억",
+        "meaning_reverse": "미성숙, 후회",
+        "image_url": "/images/cards/c06.jpg"
+    },
+    {
+        "id": 29,
+        "name": "Seven of Cups",
+        "type": "Minor",
+        "suit": "Cups",
+        "number": 7,
+        "meaning_upright": "환상, 선택",
+        "meaning_reverse": "결단, 명확성",
+        "image_url": "/images/cards/c07.jpg"
+    },
+    {
+        "id": 30,
+        "name": "Eight of Cups",
+        "type": "Minor",
+        "suit": "Cups",
+        "number": 8,
+        "meaning_upright": "포기, 여정",
+        "meaning_reverse": "망설임, 집착",
+        "image_url": "/images/cards/c08.jpg"
+    },
+    {
+        "id": 31,
+        "name": "Nine of Cups",
+        "type": "Minor",
+        "suit": "Cups",
+        "number": 9,
+        "meaning_upright": "만족, 성취",
+        "meaning_reverse": "자만, 불만족",
+        "image_url": "/images/cards/c09.jpg"
+    },
+    {
+        "id": 32,
+        "name": "Ten of Cups",
+        "type": "Minor",
+        "suit": "Cups",
+        "number": 10,
+        "meaning_upright": "행복, 조화",
+        "meaning_reverse": "불화, 긴장",
+        "image_url": "/images/cards/c10.jpg"
+    },
+    {
+        "id": 33,
+        "name": "Page of Cups",
+        "type": "Minor",
+        "suit": "Cups",
+        "number": 11,
+        "meaning_upright": "영감, 순수함",
+        "meaning_reverse": "유치함, 신뢰 부족",
+        "image_url": "/images/cards/c11.jpg"
+    },
+    {
+        "id": 34,
+        "name": "Knight of Cups",
+        "type": "Minor",
+        "suit": "Cups",
+        "number": 12,
+        "meaning_upright": "매력, 낭만",
+        "meaning_reverse": "환상, 현실 회피",
+        "image_url": "/images/cards/c12.jpg"
+    },
+    {
+        "id": 35,
+        "name": "Queen of Cups",
+        "type": "Minor",
+        "suit": "Cups",
+        "number": 13,
+        "meaning_upright": "직관, 연민",
+        "meaning_reverse": "감정적 불안정",
+        "image_url": "/images/cards/c13.jpg"
+    },
+    {
+        "id": 36,
+        "name": "King of Cups",
+        "type": "Minor",
+        "suit": "Cups",
+        "number": 14,
+        "meaning_upright": "통제, 이해",
+        "meaning_reverse": "감정 억제 실패",
+        "image_url": "/images/cards/c14.jpg"
+    },
+    {
+        "id": 37,
+        "name": "Ace of Wands",
+        "type": "Minor",
+        "suit": "Wands",
+        "number": 1,
+        "meaning_upright": "열정, 시작",
+        "meaning_reverse": "지연, 실망",
+        "image_url": "/images/cards/w01.jpg"
+    },
+    {
+        "id": 38,
+        "name": "Two of Wands",
+        "type": "Minor",
+        "suit": "Wands",
+        "number": 2,
+        "meaning_upright": "계획, 선택",
+        "meaning_reverse": "두려움, 방향 상실",
+        "image_url": "/images/cards/w02.jpg"
+    },
+    {
+        "id": 39,
+        "name": "Three of Wands",
+        "type": "Minor",
+        "suit": "Wands",
+        "number": 3,
+        "meaning_upright": "확장, 탐험",
+        "meaning_reverse": "지연, 실수",
+        "image_url": "/images/cards/w03.jpg"
+    },
+    {
+        "id": 40,
+        "name": "Four of Wands",
+        "type": "Minor",
+        "suit": "Wands",
+        "number": 4,
+        "meaning_upright": "안정, 축하",
+        "meaning_reverse": "불안정, 갈등",
+        "image_url": "/images/cards/w04.jpg"
+    },
+    {
+        "id": 41,
+        "name": "Five of Wands",
+        "type": "Minor",
+        "suit": "Wands",
+        "number": 5,
+        "meaning_upright": "경쟁, 갈등",
+        "meaning_reverse": "협력, 해결",
+        "image_url": "/images/cards/w05.jpg"
+    },
+    {
+        "id": 42,
+        "name": "Six of Wands",
+        "type": "Minor",
+        "suit": "Wands",
+        "number": 6,
+        "meaning_upright": "승리, 인정",
+        "meaning_reverse": "지연, 의심",
+        "image_url": "/images/cards/w06.jpg"
+    },
+    {
+        "id": 43,
+        "name": "Seven of Wands",
+        "type": "Minor",
+        "suit": "Wands",
+        "number": 7,
+        "meaning_upright": "도전, 용기",
+        "meaning_reverse": "약점, 회피",
+        "image_url": "/images/cards/w07.jpg"
+    },
+    {
+        "id": 44,
+        "name": "Eight of Wands",
+        "type": "Minor",
+        "suit": "Wands",
+        "number": 8,
+        "meaning_upright": "속도, 진전",
+        "meaning_reverse": "지연, 혼란",
+        "image_url": "/images/cards/w08.jpg"
+    },
+    {
+        "id": 45,
+        "name": "Nine of Wands",
+        "type": "Minor",
+        "suit": "Wands",
+        "number": 9,
+        "meaning_upright": "끈기, 회복",
+        "meaning_reverse": "포기, 피로",
+        "image_url": "/images/cards/w09.jpg"
+    },
+    {
+        "id": 46,
+        "name": "Ten of Wands",
+        "type": "Minor",
+        "suit": "Wands",
+        "number": 10,
+        "meaning_upright": "책임, 부담",
+        "meaning_reverse": "자유, 해방",
+        "image_url": "/images/cards/w10.jpg"
+    },
+    {
+        "id": 47,
+        "name": "Page of Wands",
+        "type": "Minor",
+        "suit": "Wands",
+        "number": 11,
+        "meaning_upright": "탐험, 열정",
+        "meaning_reverse": "혼란, 방향 상실",
+        "image_url": "/images/cards/w11.jpg"
+    },
+    {
+        "id": 48,
+        "name": "Knight of Wands",
+        "type": "Minor",
+        "suit": "Wands",
+        "number": 12,
+        "meaning_upright": "열정적 행동",
+        "meaning_reverse": "충동, 무모함",
+        "image_url": "/images/cards/w12.jpg"
+    },
+    {
+        "id": 49,
+        "name": "Queen of Wands",
+        "type": "Minor",
+        "suit": "Wands",
+        "number": 13,
+        "meaning_upright": "자신감, 매력",
+        "meaning_reverse": "질투, 소극성",
+        "image_url": "/images/cards/w13.jpg"
+    },
+    {
+        "id": 50,
+        "name": "King of Wands",
+        "type": "Minor",
+        "suit": "Wands",
+        "number": 14,
+        "meaning_upright": "리더십, 비전",
+        "meaning_reverse": "독재, 조급함",
+        "image_url": "/images/cards/w14.jpg"
+    },
+    {
+        "id": 51,
+        "name": "Ace of Swords",
+        "type": "Minor",
+        "suit": "Swords",
+        "number": 1,
+        "meaning_upright": "명확성, 승리",
+        "meaning_reverse": "혼란, 실패",
+        "image_url": "/images/cards/s01.jpg"
+    },
+    {
+        "id": 52,
+        "name": "Two of Swords",
+        "type": "Minor",
+        "suit": "Swords",
+        "number": 2,
+        "meaning_upright": "결단, 선택",
+        "meaning_reverse": "우유부단, 갈등",
+        "image_url": "/images/cards/s02.jpg"
+    },
+    {
+        "id": 53,
+        "name": "Three of Swords",
+        "type": "Minor",
+        "suit": "Swords",
+        "number": 3,
+        "meaning_upright": "슬픔, 상실",
+        "meaning_reverse": "회복, 용서",
+        "image_url": "/images/cards/s03.jpg"
+    },
+    {
+        "id": 54,
+        "name": "Four of Swords",
+        "type": "Minor",
+        "suit": "Swords",
+        "number": 4,
+        "meaning_upright": "휴식, 회복",
+        "meaning_reverse": "지침, 탈진",
+        "image_url": "/images/cards/s04.jpg"
+    },
+    {
+        "id": 55,
+        "name": "Five of Swords",
+        "type": "Minor",
+        "suit": "Swords",
+        "number": 5,
+        "meaning_upright": "갈등, 패배",
+        "meaning_reverse": "화해, 평화",
+        "image_url": "/images/cards/s05.jpg"
+    },
+    {
+        "id": 56,
+        "name": "Six of Swords",
+        "type": "Minor",
+        "suit": "Swords",
+        "number": 6,
+        "meaning_upright": "이동, 치유",
+        "meaning_reverse": "정체, 저항",
+        "image_url": "/images/cards/s06.jpg"
+    },
+    {
+        "id": 57,
+        "name": "Seven of Swords",
+        "type": "Minor",
+        "suit": "Swords",
+        "number": 7,
+        "meaning_upright": "책략, 기회",
+        "meaning_reverse": "정직, 자책",
+        "image_url": "/images/cards/s07.jpg"
+    },
+    {
+        "id": 58,
+        "name": "Eight of Swords",
+        "type": "Minor",
+        "suit": "Swords",
+        "number": 8,
+        "meaning_upright": "제한, 두려움",
+        "meaning_reverse": "해방, 깨달음",
+        "image_url": "/images/cards/s08.jpg"
+    },
+    {
+        "id": 59,
+        "name": "Nine of Swords",
+        "type": "Minor",
+        "suit": "Swords",
+        "number": 9,
+        "meaning_upright": "불안, 걱정",
+        "meaning_reverse": "희망, 극복",
+        "image_url": "/images/cards/s09.jpg"
+    },
+    {
+        "id": 60,
+        "name": "Ten of Swords",
+        "type": "Minor",
+        "suit": "Swords",
+        "number": 10,
+        "meaning_upright": "끝, 재시작",
+        "meaning_reverse": "회복, 기회",
+        "image_url": "/images/cards/s10.jpg"
+    },
+    {
+        "id": 61,
+        "name": "Page of Swords",
+        "type": "Minor",
+        "suit": "Swords",
+        "number": 11,
+        "meaning_upright": "호기심, 관찰",
+        "meaning_reverse": "정보 부족, 조급함",
+        "image_url": "/images/cards/s11.jpg"
+    },
+    {
+        "id": 62,
+        "name": "Knight of Swords",
+        "type": "Minor",
+        "suit": "Swords",
+        "number": 12,
+        "meaning_upright": "결단력, 행동",
+        "meaning_reverse": "충동적, 무모함",
+        "image_url": "/images/cards/s12.jpg"
+    },
+    {
+        "id": 63,
+        "name": "Queen of Swords",
+        "type": "Minor",
+        "suit": "Swords",
+        "number": 13,
+        "meaning_upright": "지혜, 독립",
+        "meaning_reverse": "냉정, 고립",
+        "image_url": "/images/cards/s13.jpg"
+    },
+    {
+        "id": 64,
+        "name": "King of Swords",
+        "type": "Minor",
+        "suit": "Swords",
+        "number": 14,
+        "meaning_upright": "권위, 논리",
+        "meaning_reverse": "전제적, 무정",
+        "image_url": "/images/cards/s14.jpg"
+    },
+    {
+        "id": 65,
+        "name": "Ace of Pentacles",
+        "type": "Minor",
+        "suit": "Pentacles",
+        "number": 1,
+        "meaning_upright": "기회, 번영",
+        "meaning_reverse": "지연, 손실",
+        "image_url": "/images/cards/p01.jpg"
+    },
+    {
+        "id": 66,
+        "name": "Two of Pentacles",
+        "type": "Minor",
+        "suit": "Pentacles",
+        "number": 2,
+        "meaning_upright": "균형, 적응",
+        "meaning_reverse": "혼란, 압박",
+        "image_url": "/images/cards/p02.jpg"
+    },
+    {
+        "id": 67,
+        "name": "Three of Pentacles",
+        "type": "Minor",
+        "suit": "Pentacles",
+        "number": 3,
+        "meaning_upright": "협력, 기술",
+        "meaning_reverse": "갈등, 실수",
+        "image_url": "/images/cards/p03.jpg"
+    },
+    {
+        "id": 68,
+        "name": "Four of Pentacles",
+        "type": "Minor",
+        "suit": "Pentacles",
+        "number": 4,
+        "meaning_upright": "안정, 보유",
+        "meaning_reverse": "탐욕, 손실",
+        "image_url": "/images/cards/p04.jpg"
+    },
+    {
+        "id": 69,
+        "name": "Five of Pentacles",
+        "type": "Minor",
+        "suit": "Pentacles",
+        "number": 5,
+        "meaning_upright": "빈곤, 어려움",
+        "meaning_reverse": "희망, 구제",
+        "image_url": "/images/cards/p05.jpg"
+    },
+    {
+        "id": 70,
+        "name": "Six of Pentacles",
+        "type": "Minor",
+        "suit": "Pentacles",
+        "number": 6,
+        "meaning_upright": "나눔, 지원",
+        "meaning_reverse": "의존, 불공평",
+        "image_url": "/images/cards/p06.jpg"
+    },
+    {
+        "id": 71,
+        "name": "Seven of Pentacles",
+        "type": "Minor",
+        "suit": "Pentacles",
+        "number": 7,
+        "meaning_upright": "성찰, 평가",
+        "meaning_reverse": "낭비, 조급함",
+        "image_url": "/images/cards/p07.jpg"
+    },
+    {
+        "id": 72,
+        "name": "Eight of Pentacles",
+        "type": "Minor",
+        "suit": "Pentacles",
+        "number": 8,
+        "meaning_upright": "숙련, 노련",
+        "meaning_reverse": "게으름, 중단",
+        "image_url": "/images/cards/p08.jpg"
+    },
+    {
+        "id": 73,
+        "name": "Nine of Pentacles",
+        "type": "Minor",
+        "suit": "Pentacles",
+        "number": 9,
+        "meaning_upright": "독립, 풍요",
+        "meaning_reverse": "외로움, 의존",
+        "image_url": "/images/cards/p09.jpg"
+    },
+    {
+        "id": 74,
+        "name": "Ten of Pentacles",
+        "type": "Minor",
+        "suit": "Pentacles",
+        "number": 10,
+        "meaning_upright": "유산, 성공",
+        "meaning_reverse": "손실, 혼란",
+        "image_url": "/images/cards/p10.jpg"
+    },
+    {
+        "id": 75,
+        "name": "Page of Pentacles",
+        "type": "Minor",
+        "suit": "Pentacles",
+        "number": 11,
+        "meaning_upright": "학습, 기회",
+        "meaning_reverse": "혼란, 실패",
+        "image_url": "/images/cards/p11.jpg"
+    },
+    {
+        "id": 76,
+        "name": "Knight of Pentacles",
+        "type": "Minor",
+        "suit": "Pentacles",
+        "number": 12,
+        "meaning_upright": "노력, 책임",
+        "meaning_reverse": "지루함, 고집",
+        "image_url": "/images/cards/p12.jpg"
+    },
+    {
+        "id": 77,
+        "name": "Queen of Pentacles",
+        "type": "Minor",
+        "suit": "Pentacles",
+        "number": 13,
+        "meaning_upright": "실용성, 풍요",
+        "meaning_reverse": "탐욕, 방치",
+        "image_url": "/images/cards/p13.jpg"
+    },
+    {
+        "id": 78,
+        "name": "King of Pentacles",
+        "type": "Minor",
+        "suit": "Pentacles",
+        "number": 14,
+        "meaning_upright": "안정, 번영",
+        "meaning_reverse": "탐욕, 오만",
+        "image_url": "/images/cards/p14.jpg"
+    }
+]
