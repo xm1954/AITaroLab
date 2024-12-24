@@ -1,6 +1,7 @@
 # AI타로 리딩 웹 애플리케이션 🎴✨
 
-![스크린샷 2024-12-24 180039](https://github.com/user-attachments/assets/fe75a70c-49b9-4565-bb58-a868923f1e92) 
+![스크린샷 2024-12-24 180039](https://github.com/user-attachments/assets/c6335589-e08f-48c9-b0c1-e7d43faa0cb3)
+
 > **운명과 통찰을 탐구할 수 있는 현대적이고 직관적인 타로 리딩 웹 애플리케이션**
 
 ---
