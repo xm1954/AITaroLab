@@ -167,9 +167,8 @@ const Header = () => {
 
                 {menu && (
                     <div className="sidebar">
-                        <div className="sidebar-item">타로 뽑기</div>
-                        <div className="sidebar-item">문의하기</div>
-                        <div className="sidebar-item">설정</div>
+                        <div className="sidebar-item" onClick={(e) => {handleNavigation('/Question')}}>타로 뽑기</div>
+                        <div className="sidebar-item" onClick={(e) => {handleNavigation('/feedback')}}>문의하기</div>
                     </div>
                 )}
 

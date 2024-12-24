@@ -66,9 +66,6 @@ const FeedbackList = () => {
                         <strong>작성자:</strong> {feedback.memberEmail}
                     </p>
                     <p>
-                        <strong>피드백 유형:</strong> {feedback.feedbackType}
-                    </p>
-                    <p>
                         <strong>내용:</strong> {feedback.content}
                     </p>
                     <p>

@@ -49,6 +49,7 @@ const Card = () => {
         if (selectedCards.length >= totalCardsToDraw) return;
 
         try {
+            const token = localStorage.getItem("authToken");
             let cardId;
             do {
                 cardId = Math.floor(Math.random() * totalCards) + 1;
@@ -56,7 +57,9 @@ const Card = () => {
 
             const response = await fetch(`${baseUrl}/api/tarot/select`, {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: { "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`,
+                },
                 body: JSON.stringify({ cardId }),
             });
 

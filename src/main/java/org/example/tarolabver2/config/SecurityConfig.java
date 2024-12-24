@@ -39,8 +39,9 @@ public class SecurityConfig {
 
 
                 .authorizeHttpRequests(authorize
-                        -> authorize.requestMatchers("/api/members/login", "/api/members/register", "/api/members/role").permitAll()
-                         .anyRequest().authenticated()) // 로그인, 회원가입 허용
+                        ->authorize.anyRequest().permitAll())
+//
+//                        authorize.requestMatchers("/api/members/login", "/api/members/register", "/api/members/role", "/images/**", "/results/**", "https://api.openai.com/v1/chat/completions").permitAll()
 
 
 

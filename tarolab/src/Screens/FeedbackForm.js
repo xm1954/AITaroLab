@@ -54,17 +54,17 @@ const FeedbackForm = () => {
         <div>
             <Header />
             <div className="feedback-form-container">
-                <h1 className="feedback-title">사용자 피드백</h1>
+                <h1 className="feedback-title">문의하기</h1>
                 <form className="feedback-form" onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="feedbackType">피드백 유형 *</label>
+                        <label htmlFor="feedbackType">문의 유형 *</label>
                         <select
                             id="feedbackType"
                             value={feedbackType}
                             onChange={(e) => setFeedbackType(e.target.value)}
                             required
                         >
-                            <option value="">피드백 유형을 선택해 주세요</option>
+                            <option value="">문의 유형을 선택해 주세요</option>
                             <option value="bug">버그 신고</option>
                             <option value="feature">기능 요청</option>
                             <option value="other">기타</option>
@@ -72,10 +72,10 @@ const FeedbackForm = () => {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="content">피드백 내용 *</label>
+                        <label htmlFor="content">문의할 내용 *</label>
                         <textarea
                             id="content"
-                            placeholder="피드백 내용을 자세히 설명해 주세요..."
+                            placeholder="문의 내용을 입력해 주세요."
                             value={content}
                             onChange={(e) => setContent(e.target.value)}
                             required
